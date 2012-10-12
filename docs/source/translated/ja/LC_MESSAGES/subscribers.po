@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LocalWiki 0.3\n"
+"Project-Id-Version: LocalWiki 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-18 03:07\n"
+"POT-Creation-Date: 2012-10-12 10:53\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/subscribers.rst:2
-# 6640c7ee6a834794bf2c48dee281bd94
+# 71eee29e8cb94271a42e48d53534002b
 msgid "Subscriber list"
 msgstr ""
 
 #: ../source/subscribers.rst:4
-# bb069d2a6bdf443a9a9df8d7cc580c41
+# eb6114feb0b846beb3c8edb9704ef0d4
 msgid "As a website administrator, you often want to send updates or newsletters to your users. To do this, you need a list of email addresses. But it's not nice to send unsolicited email without a person's permission, so LocalWiki provides an opt-in list."
 msgstr ""
 
 #: ../source/subscribers.rst:9
-# 9672058a894f4f42aa58aa37eecaecb3
+# eebe62abf10e4335a20ecd7efe25c1ef
 msgid "When users register on your LocalWiki site, they can opt-in to receive email updates. Those who opt-in are added to a list, which is available to you, the administrator, at this address:"
 msgstr ""
 
 #: ../source/subscribers.rst:13
-# e45fec405cea4928897e4504396f5ca4
+# 81e49d3cfb3a44be8c3f8aae7a45aa90
 msgid "``http://<your server's address>/admin/subscribers/``"
 msgstr ""
 
 #: ../source/subscribers.rst:15
-# a5634f4d484a48f18b579dc749b203a5
+# bdd871db2571422ca6da9b0856ec8bf3
 msgid "From here, you can copy this list and import it into your email software."
 msgstr ""
 

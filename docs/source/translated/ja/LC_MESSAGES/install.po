@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LocalWiki 0.3\n"
+"Project-Id-Version: LocalWiki 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-18 03:07\n"
+"POT-Creation-Date: 2012-10-12 10:53\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,57 +17,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/install.rst:2
-# 2c959b8c766e497bbe5732543af7f9c3
+# 7aab503983a940618695aacdbf4d2c16
 msgid "Installing"
 msgstr ""
 
 #: ../source/install.rst:4
-# 5b6297fa631846148faf3db359c9d739
+# 31f07c2d0543476cbda3bdeb022d751a
 msgid "The easiest way to install LocalWiki is by using our Ubuntu package."
 msgstr ""
 
 #: ../source/install.rst:7
-# fa25af6261014f4d8981ab287dbc4304
+# c2c6f5dcb6424d9c8a4bdde3ae2ce37f
 msgid "Installing on Ubuntu"
 msgstr ""
 
 #: ../source/install.rst:9
-# 9195c5c0adf146f1a86500eb6335160b
+# e791839b69824f2b8b232f4d5e0e1a88
 msgid "LocalWiki is available as a prebuilt package for Ubuntu 10.04 LTS or newer."
 msgstr ""
 
 #: ../source/install.rst:11
-# af6fdb61f8414a6eb21bf64afc0d7ed1
+# ddcc56e673b040aea78ef4ac040f51f7
 msgid "Just open a terminal and run these commands::"
 msgstr ""
 
 #: ../source/install.rst:18
-# 680ca69c6fc04aaf89cdc1297d81af91
+# ee94c4f125084a8196a1c8a26dfea46d
 msgid "That's it! Follow the prompts to configure LocalWiki."
 msgstr ""
 
 #: ../source/install.rst:23
-# 391b43263d66479c8c94d5e9a2d0796e
+# cf75070604154a4f88b0b04260553e21
 msgid "Installing on other systems"
 msgstr ""
 
 #: ../source/install.rst:25
-# 139f488faff54cf28d01d4cd6439c8ba
+# 4058a6d270c14dae87554ed166b65df2
 msgid "This installation method should only be used if you can't use the Ubuntu package or if you want to set up a development enviroment."
 msgstr ""
 
 #: ../source/install.rst:29
-# 989f6ab331e74df0b2b3ac04980ceedc
+# 376fd5cecef442b7b71b9b6e977a4069
 msgid "See our ``INSTALL`` file for detailed instructions.  The file is also included here:"
 msgstr ""
 
 #: ../source/install.rst:36
-# 76de0e4d9dfc4e9d954aeef6daacbe31
+# d48393f61089452c8efbe40a9f377724
 msgid "More info"
 msgstr ""
 
 #: ../source/install.rst:38
-# 231f106c4f364424a4d549b2613369bd
+# 7c574d5266fd46398653ec7d83a76b7a
 msgid "See https://dev.localwiki.org for more information on installation."
 msgstr ""
 

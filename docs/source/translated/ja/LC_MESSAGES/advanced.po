@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LocalWiki 0.3\n"
+"Project-Id-Version: LocalWiki 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-18 03:07\n"
+"POT-Creation-Date: 2012-10-12 10:53\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/advanced.rst:2
-# 46bf26931b004c0bbf68176c19c1af66
+# 038d1481a97e4a3f9d1a4ed9bda47614
 msgid "Advanced topics"
 msgstr ""
 
 #: ../source/advanced.rst:6
-# 8e8476a4d9e24c6dbd4b8f49388f34b3
+# 7a50937b6e0d42569c1c67df555c1980
 msgid "SSL"
 msgstr ""
 
 #: ../source/advanced.rst:8
-# c50f069780de4d448b543f44330a1de6
+# e401b2754d114fceb4f57fe5fbfde3f5
 msgid "See http://dev.localwiki.org/Setting_up_SSL"
 msgstr ""
 

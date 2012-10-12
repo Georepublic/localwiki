@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LocalWiki 0.3\n"
+"Project-Id-Version: LocalWiki 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-18 03:07\n"
+"POT-Creation-Date: 2012-10-12 10:53\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,77 +17,77 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/configure.rst:2
-# 7a36b63fc9f246758d8f8b9f27c95479
+# 8426cdcc265549da89d22c4e4f0106e3
 msgid "Web server configuration"
 msgstr ""
 
 #: ../source/configure.rst:6
-# 47b0900c62204ff692fed49e4f982e67
+# 3929794154a6433fb0da22975a5af42a
 msgid "Normal installation"
 msgstr ""
 
 #: ../source/configure.rst:8
-# b9c06fac603d4b27be9df184216cc46d
+# 678d960520af4b86ae1991e7c16d71f4
 msgid "If you installed the LocalWiki software using the Ubuntu package then an Apache site should be automatically up and running.  Its configuration file can found in ``/etc/apache2/sites-enabled/example.com``.  You'll want to open that file and change the server name, etc."
 msgstr ""
 
 #: ../source/configure.rst:13
-# 3f5206497bdd4773b13f462bdef965b2
+# ab0d49cb875b493f81029442408c878e
 msgid "Please see the `official Apache documentation <http://httpd.apache.org/docs/>`_ for all possible configuration values."
 msgstr ""
 
 #: ../source/configure.rst:18
-# 859cd98330f7418f9201f8e2aaa22ace
+# 7a8e7b473745489cad0794b6e7964238
 msgid "Development server"
 msgstr ""
 
 #: ../source/configure.rst:20
-# c60d9e3cde4c467cb2f705a2c4b5fcd4
+# cae2a7ed90c44205b8b4bade59c51a62
 msgid "If you're doing development or testing, you can run ``localwiki-manage runserver`` to start the built-in webserver.  Don't use this in production."
 msgstr ""
 
 #: ../source/configure.rst:25
-# 0453baf4b0154d57b90767f99dd12771
+# 0478b93e754e4ea8a81bc407adf4379a
 msgid "Manual installations"
 msgstr ""
 
 #: ../source/configure.rst:27
-# 5ff650c5c8a341778f940bf15cdeddf4
+# 63b9e94e9c5c45b28b214e9cc02ddcaf
 msgid "If you installed LocalWiki manually then you'll need to copy the wsgi template file and edit it::"
 msgstr ""
 
 #: ../source/configure.rst:33
-# 3367e5b8366e4af984009893eff11eb5
+# 74bc7d069d2b4f4c90bfdf863aa66a4e
 msgid "Then open up ``localwiki.wsgi`` and set ``VIRTUAL_ENV_PATH`` to the absolute path to the virtualenv you installed LocalWiki in."
 msgstr ""
 
 #: ../source/configure.rst:36
-# 34f306725e10467c95ee67092cbb94a9
-msgid "Then you'll need to create an Apache configuration file.  Here's a sample::"
+# 038b960f8981416d9c74e9b0a411d370
+msgid "Then you'll need to create an Apache configuration file.  Here's a sample:"
 msgstr ""
 
-#: ../source/configure.rst:93
-# 8f2f35f6b64542a29dadb2699982b823
+#: ../source/configure.rst:41
+# fc0f688d30a0408890137ffa35ace396
 msgid "You'll need to set some of these values:"
 msgstr ""
 
-#: ../source/configure.rst:95
-# 323980dbdff445bc9a1e441c6bea7667
+#: ../source/configure.rst:43
+# 7212b1c8338e4eee956b64894353a910
 msgid "``ServerAdmin``, ``ServerName``, and ``ServerAlias`` should be self-explanatory.  Read the Apache docs for more info."
 msgstr ""
 
-#: ../source/configure.rst:98
-# 7c56d4d1245f438080035e469bf5e41e
+#: ../source/configure.rst:46
+# f6c2d493c3fc4f44a60ab136702c53ca
 msgid "``WSGIScriptAlias / /path/to/your/deploy/localwiki.wsgi`` -- you'll need to change ``/path/to/your/deploy/`` to be the path to where the ``localwiki.wsgi`` file lives."
 msgstr ""
 
-#: ../source/configure.rst:102
-# 823bf9c43ed44d1684e2917cef6e1642
+#: ../source/configure.rst:50
+# 25e8012776564f9fad657febe469e2ab
 msgid "In all of the ``Alias ...`` lines you'll need to change ``/path/to/your/env`` to be the absolute path to the virtualenv where you installed LocalWiki."
 msgstr ""
 
-#: ../source/configure.rst:106
-# a81fb87939c84620b628296fb9a573a0
+#: ../source/configure.rst:54
+# 64594c830866448da58decda99043245
 msgid "After you make you're changes you'll need to restart Apache. Please see the `official Apache documentation <http://httpd.apache.org/docs/>`_ for more on all this."
 msgstr ""
 
