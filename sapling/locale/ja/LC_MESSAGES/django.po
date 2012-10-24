@@ -1162,7 +1162,7 @@ msgstr "<a href=\"%s\">自分のページを作って</a>あなたのことを�
 
 #: users/registration_backend/forms.py:29
 msgid "Username"
-msgstr "ユーザ名"
+msgstr "ユーザ名(英数字のみ)"
 
 #: users/registration_backend/forms.py:31
 msgid "This value may contain only letters (a-z), numbers, +, - and ."
@@ -1178,7 +1178,7 @@ msgstr "パスワード"
 
 #: users/registration_backend/forms.py:40
 msgid "Your name"
-msgstr "あなたの名前"
+msgstr "あなたの名前(本名)"
 
 #: users/registration_backend/forms.py:45
 msgid "You must agree to the terms to register"
