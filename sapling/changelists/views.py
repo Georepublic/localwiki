@@ -31,7 +31,6 @@ class ChangeListsView(ListView):
             if not n.history_type == TYPE_DELETED:
                 h['history_date'] = n.history_date
                 m.append(h)
-        m = m[:20]
         for h in m:
             p = Page.objects.get(id = h['id'])
             l.append({'history_date': h['history_date'], 'page': p})
