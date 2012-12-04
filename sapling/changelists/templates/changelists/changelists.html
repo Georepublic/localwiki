@@ -1,0 +1,22 @@
+{% extends "site/base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block title %}Change Lists - {{ block.super }}{% endblock %}
+
+{% block header_title %}<a href="{% url 'changelists' %}">Change Lists</a>{% endblock %}
+
+{% block content %}
+  <div id="changelists">
+    {% for page_history in page_histories %}
+      <h3>{% blocktrans with version_date=page_history.objs.0.history_date|timesince %}last modified {{ version_date }} ago{% endblocktrans %}</h3>
+      <ul>
+	{% for obj in page_history.objs %}
+          <li>
+	    <span><a href="{{ obj.page.get_absolute_url }}">{{ obj.page.name }}</a></span>
+	  </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+{% endblock %}

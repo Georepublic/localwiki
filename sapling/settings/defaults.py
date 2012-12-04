@@ -266,6 +266,7 @@ INSTALLED_APPS = (
     'dashboard',
     'api',
     'utils',
+    'changelists',
 )
 
 LOCAL_INSTALLED_APPS = ()

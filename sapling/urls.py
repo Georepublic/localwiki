@@ -9,6 +9,7 @@ import pages
 import maps
 import redirects
 import dashboard
+import changelists
 from users.admin import SubscribedList
 
 from api import api_router
@@ -26,6 +27,7 @@ urlpatterns = patterns('',
     (r'^(?i)Users/', include('sapling.users.urls')),
     (r'^search/', include('sapling.search.urls')),
     (r'^', include('sapling.recentchanges.urls')),
+    (r'^', include('sapling.changelists.urls')),
     (r'^tools/', include(dashboard.site.urls)),
 
     # JS i18n support.
