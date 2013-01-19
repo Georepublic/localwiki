@@ -29,6 +29,25 @@ class MapResource(pages.api.PageURLMixin, gis_resources.ModelResource):
         authentication = ApiKeyWriteAuthentication()
         authorization = DjangoAuthorization()
 
+class MapWithPageResource(pages.api.PageURLMixin, gis_resources.ModelResource):
+    page = fields.ToOneField('pages.api.PageResource', 'page', full=True)
+
+    class Meta:
+        queryset = MapData.objects.all()
+        resource_name = 'map_with_page'
+        detail_uri_name = 'page__name'
+        filtering = {
+            'page': ALL_WITH_RELATIONS,
+            'points': ALL,
+            'lines': ALL,
+            'polys': ALL,
+            'geom': ALL,
+            'length': ALL,
+        }
+        list_allowed_methods = ['get']
+        authentication = ApiKeyWriteAuthentication()
+        authorization = DjangoAuthorization()
+
 
 # We don't use detail_uri_name here because it becomes too complicated
 # to generate pretty URLs with the historical version identifers.
@@ -53,3 +72,4 @@ class MapHistoryResource(gis_resources.ModelResource, ModelHistoryResource):
 
 api.register(MapResource())
 api.register(MapHistoryResource())
+api.register(MapWithPageResource())
