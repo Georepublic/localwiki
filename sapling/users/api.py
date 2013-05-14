@@ -18,6 +18,7 @@ class UserResource(ModelResource):
             'last_name': ALL,
             'date_joined': ALL,
         }
+        ordering = ['username', 'first_name', 'last_name', 'date_joined']
 
 class ApiKeyResource(ModelResource):
     class Meta:
