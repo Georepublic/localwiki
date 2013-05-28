@@ -1,11 +1,13 @@
 from django import template
 from django.template.loader_tags import BaseIncludeNode
 from django.template import Template
+from django.template.loader import get_template
 from django.utils.translation import ugettext as _
 from django.conf import settings
 
 from pages.plugins import html_to_template_text, SearchBoxNode
 from pages.plugins import LinkNode, EmbedCodeNode
+from pages.plugins import get_first_image
 from pages import models
 from django.utils.text import unescape_string_literal
 from pages.models import Page, slugify
@@ -192,3 +194,35 @@ def do_link(parser, token):
     nodelist = parser.parse(('endlink',))
     parser.delete_first_token()
     return LinkNode(unescape_string_literal(href), nodelist)
+
+
+class OpenGraphNode(BaseIncludeNode):
+    def __init__(self, html_var, render_plugins=True, *args, **kwargs):
+        super(OpenGraphNode, self).__init__(*args, **kwargs)
+        self.html_var = template.Variable(html_var)
+
+    def render(self, context):
+        try:
+            t = get_template("pages/ogp.html")
+            html = unicode(self.html_var.resolve(context))
+            # parse content html and set to context
+            get_first_image(html, context)
+            return self.render_template(t, context)
+        except:
+            if settings.TEMPLATE_DEBUG:
+                raise
+            return ''
+
+
+@register.tag(name='opengraph')
+def do_parse_content_image_and_render_opengraph(parser, token):
+    """
+    Render Opengraph meta tag.
+    """
+    try:
+        tag, html_var = token.split_contents()
+    except ValueError:
+        raise template.TemplateSyntaxError, ("%r tag requires one argument" %
+                                             token.contents.split()[0])
+    return OpenGraphNode(html_var, True)
+

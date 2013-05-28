@@ -4,6 +4,13 @@
 {% load pages_tags %}
 {% load tags_tags %}
 
+{% block head_extra %}
+{{ block.super }}
+{% if config.FACEBOOK_APP_ID %}
+{% opengraph page.content %}
+{% endif %}
+{% endblock %}
+
 {% block media %}{{block.super}}{% if map %}{{ map.media }}{% endif %}
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery/jquery-1.7.min.js"></script>
 {% endblock %}

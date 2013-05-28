@@ -306,6 +306,40 @@ def html_to_template_text(unsafe_html, context=None, render_plugins=True):
     template_text = template_text.replace('src_thumb', 'src')
     return template_text.decode('utf-8')
 
+def get_first_image(unsafe_html, context=None):
+    """
+    Parse html and get first image and set it to context.
+    """
+    if not context or 'page' not in context:
+        return
+    # TODO: factor out parsing/serializing
+    safe_html = sanitize_intermediate(unsafe_html)
+    top_level_elements = fragments_fromstring(safe_html)
+
+    # put top level elements in container
+    container = etree.Element('div')
+    container.extend(top_level_elements)
+
+    tree = etree.iterwalk(container, events=('end',))
+    # walk over all elements while find img tag
+    for action, elem in tree:
+        if elem.tag != 'img':
+            continue
+        src = desanitize(elem.attrib.get('src', ''))
+        if not src.startswith(_files_url):
+            if not src.startswith("http"):
+                continue
+            context['firstimage'] = src
+            return
+        page = context['page']
+        try:
+            file = PageFile.objects.get(slug__exact=page.slug,
+                                        name__exact=file_url_to_name(src))
+        except PageFile.DoesNotExist:
+            continue
+        request = context['request']
+        context['firstimage'] = request.build_absolute_uri(file.file.url)
+        return
 
 class LinkNode(Node):
     def __init__(self, href, nodelist):
