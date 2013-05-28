@@ -327,4 +327,6 @@ CONSTANCE_CONFIG = {
     'GOOGLE_ANALYTICS_ID': ('', 'UA-* identifier to pass to GA _setAccount'),
     'GOOGLE_ANALYTICS_SUBDOMAINS': ('', 'Subdomain value to pass to GA _setDomainName'),
     'GOOGLE_ANALYTICS_MULTIPLE_TOPLEVEL_DOMAINS': ('', 'Truthy/Falsey value to trigger GA _setAllowLinker'),
+    'FACEBOOK_APP_ID': ('', 'Facebook App ID for Like Button'),
+    'TWITTER': (False, 'Truthy/Falsey value to trigger Tweet Button'),
 }

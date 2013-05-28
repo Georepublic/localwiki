@@ -15,14 +15,33 @@
     <a href="{% url pages:show slug=page.pretty_slug %}">{{ page.name }}</a>
   {% endif %}
 {% endblock %}
-
+    
 {% block main %}
 {{ block.super }}
 {% endblock %}
 
+{% block after_body %}
+  {% if config.FACEBOOK_APP_ID %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId={{ config.FACEBOOK_APP_ID }}";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+  {% endif %}
+{% endblock %}
+    
 {% block object_actions %}
   <ul>
     {% if page %}
+      {% if config.FACEBOOK_APP_ID %}
+        {% include "pages/facebook.html" %}
+      {% endif %}
+      {% if config.TWITTER %}
+        {% include "pages/twitter.html" %}
+      {% endif %}
         <li><a href="{% url pages:edit slug=page.pretty_slug %}" class="button">{% trans "Edit" %}</a></li>
         <li><a href="{% url pages:history slug=page.pretty_slug %}" class="button">{% trans "Info" %}</a></li>
     {% endif %}

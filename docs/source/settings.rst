@@ -44,6 +44,12 @@ In the admin interface, go to "Config" under "Constance".
 ``GOOGLE_ANALYTICS_SUBDOMAINS``
     If you use `subdomains with Google Analytics <https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite#domainSubDomains>`_ , set your subdomains value to pass to the _setDomainName method.
 
+``FACEBOOK_APP_ID``
+    If you use `Facebook Like Button <https://developers.facebook.com/docs/reference/plugins/like/>`_ , set your Facebook App ID.
+
+``TWITTER``
+    If you use `Tweet Button <https://dev.twitter.com/docs/tweet-button>`_ , tick the checkbox.
+    
 .. figure:: /_static/images/admin_ga.png
 
 
