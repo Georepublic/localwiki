@@ -21,6 +21,7 @@ from versionutils import versioning
 import exceptions
 from fields import WikiHTMLField
 
+from lxml.html import fragments_fromstring
 
 class Page(models.Model):
     name = models.CharField(max_length=255)
@@ -181,6 +182,15 @@ class Page(models.Model):
                 obj.pk = None  # Reset the primary key before saving.
                 obj.save(comment=_("Parent page renamed"))
 
+    def summary(self):
+        fragments = fragments_fromstring(self.content)
+        ret = ""
+        for f in fragments:
+            text = f.text.strip()
+            if text == "":
+                continue
+            ret = ret + text + " "
+        return ret
 
 class PageDiff(diff.BaseModelDiff):
     fields = ('name',

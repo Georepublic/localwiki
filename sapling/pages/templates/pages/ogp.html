@@ -1,7 +1,8 @@
 <meta property="fb:app_id" content="{{config.FACEBOOK_APP_ID}}" /> 
 <meta property="og:type" content="article" /> 
 <meta property="og:url" content="{{ request.build_absolute_uri }}" /> 
-<meta property="og:title" content="{{ page.name }} - {% if current_site %}{{ current_site.name }}{% else %}Wiki{% endif %}" /> 
+<meta property="og:title" content="{{ page.name }} - {% if current_site %}{{ current_site.name }}{% else %}Wiki{% endif %}" />
+<meta property="og:description" content="{{ page.summary }}" />
 {% if firstimage %}
 <meta property="og:image" content="{{ firstimage }}" />
 {% endif %}
